@@ -14,53 +14,17 @@
     <!-- Main contaeiner start -->
 <div class="main-container">
     <!-- ==== Aside Start -===== -->
-<div class="aside">
-    <div class="logo">
-        <a href="#"><span>M</span>bare<span style="font-size: 13px;"> Online</span></a>  
-    </div>
-    <div class="nav-tongler">
-        <span></span>
-    </div>
-    <ul class="nav">
-        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="../Market/homemarket.html"  class="active"><i class="fa fa-search-dollar"></i> Market</a></li>
-        <li><a href="../Services/servicehome.html"><i class="fa fa-seedling"></i> Services</a></li>
-        <li><a href="../Jobs/jobshome.html"><i class="fa fa-briefcase"></i> Jobs</a></li>
-        <li><a href="../Anyalyse/analysehome.html"><i class="fa fa-chart-bar"></i> Analyse</a></li>
-    </ul>
-    <div class="user">
-        <a href="../Profile/profilehome.html"><i class="fa fa-user"></i> Profile</a>
-    </div>
-    
-</div>
+    <?php 
+    $page ='market';
+    include_once '../shared/aside.php';
+    ?>
     <!-- ==== Aside Ends -===== -->
           <!-- main content start -->
     <div class="main-content">
 
 <!-- Home Section Start -->
 <section class="home section">
- <nav class="nav-section">
-
-    <div class="category"><span><i class="fa fa-list-dots"></i></span></i> Category 
-        <span style="margin-left:15px ;">|</span></div>
-<div class="search-box">
-    <input type="text" class="search-txt" name="search" placeholder="What are you searching for..">
-<a href="../Otherfile/searchResults.html" class="search-btn">
-    <i class="fa fa-search"></i>
-</a>
-</div>
-<div class="uer-signup">
-    <div>
-        <a href="#"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">|</span> </span> <small class="free">.Its free</small></a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">|</span></small> </a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-circle-dollar-to-slot"></i> <small class="message"> Orders</small></a>
-    </div>
-</div>
- </nav>
+<?php include_once '../shared/nav.php';?>
  <div class="main-item">
  <div class="cats">
 
@@ -113,7 +77,19 @@
     <div class="box5 box">Seven</div>
     <div class="box5 box">Eight</div>
 </div>
-
+<div class="heading">
+    Wholesale <span></span>
+  </div>
+<div class="wrapper-items">
+  <div class=" box">One</div>
+  <div class=" box">Two</div>
+  <div class="box3 box">Three</div>
+  <div class="box4 box">Four</div>
+  <div class="box5 box">Five</div>
+  <div class="box5 box">Six</div>
+  <div class="box5 box">Seven</div>
+  <div class="box5 box">Eight</div>
+</div>
 <div class="heading">
     Apparel <span style="width: 100%;"></span>
 </div>

@@ -14,25 +14,7 @@
     <!-- Main contaeiner start -->
 <div class="main-container">
     <!-- ==== Aside Start -===== -->
-<div class="aside">
-    <div class="logo">
-        <a href="#"><span>M</span>bare<span style="font-size: 13px;"> Online</span></a>  
-    </div>
-    <div class="nav-tongler">
-        <span></span>
-    </div>
-    <ul class="nav">
-        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="../Market/homemarket.html"  ><i class="fa fa-search-dollar"></i> Market</a></li>
-        <li><a href="../Services/servicehome.html"><i class="fa fa-seedling"></i> Services</a></li>
-        <li><a href="../Jobs/jobshome.html" ><i class="fa fa-briefcase"></i> Jobs</a></li>
-        <li><a href="../Anyalyse/analysehome.html"><i class="fa fa-chart-bar"></i> Analyse</a></li>
-    </ul>
-    <div class="user">
-        <a href="../Profile/profilehome.html"><i class="fa fa-user"></i> Profile</a>
-    </div>
-    
-</div>
+    <?php include_once '../shared/aside.php';?>
     <!-- ==== Aside Ends -===== -->
           <!-- main content start -->
     <div class="main-content">
@@ -40,7 +22,7 @@
 <!-- Home Section Start -->
 <section class="home section">
 
- <div class="make-form">
+<div class="make-form">
     <form action="#">
 
 <p style="color:#888;">cover photo</p>
@@ -48,40 +30,43 @@
 <button><i class="fa fa-hamburger"></i> Add cover Photo</button>
 </div>
 <div class="details">
-    <h3>Hire someone</h3>
+    <h3>Make Your Sale Today</h3>
     <div >
-        <input type="text" name="title" id="title" placeholder="TITLE" style="width: 300px;"> 
+        <input type="text" name="title" id="title" placeholder="TITLE" style="width: 160px;"> <input type="number" name="quantity" id="quantity" class="number" placeholder="quantity">
     </div>
     <div>
-        <select name="catefory" id="category" style="width: 300px;">
+        <select name="catefory" id="category">
             <option value="cat">Select Category</option>
-            <option value="apperal">Accounting</option>
-            <option value="Electronics">Advertising&Marketting</option>
-            <option value="Home/Garden">Sales&Retail</option>
-            <option value="Transport">Business Operations</option>
-            <option value="repair">Man-Power</option>
-            <option value="HS">Labour</option>
-            <option value="other">Other</option>
-     
+            <option value="apperal">Fashion</option>
+            <option value="Electronics">Electronic</option>
+            <option value="Home/Garden">Home&Garden</option>
+            <option value="Gadgets">Tech</option>
+            <option value="Housing">Housing</option>
+            <option value="Cosmetics">Health&Beauty</option>
+            <option value="Food">Grocery</option>
+            <option value="Butchery">Butchery</option>
+            <option value="Gaming">Gaming Cosoles</option>
         </select>
-        
+        <input type="number" name="price" id="price" class="number"  placeholder="$ Price">
     </div>
     <div>
         <div style="margin-bottom: 0;">
           <a href="#">#Location</a>  
         </div>
         <div style="display: grid;margin-left:10px ;margin-bottom:0 ;">
-          <div style="margin-bottom: 0;margin-right:10px ;">
+            <small><i class="fa fa-ship"></i> Shipping</small>
+            <div style="margin-bottom: 0;">
+                 <div style="margin-bottom: 0;margin-right:10px ;">
                 <label for="shipping">
-                    <i class="fa fa-briefcase"></i> Full Time
+                    Yes
                 </label><input type="radio" name="shipping" id="shipping">
             </div>
-                  <div style="margin-bottom: 0;">
-<label for="shipping">
-    <i class="fa fa-handshake-simple"></i> Contract
-</label>
+            <div style="margin-bottom: 0;">
+<label for="shipping">No</label>
                  <input type="radio" name="shipping" id="shipping">
                 </div>
+            </div>
+           
        
         </div>
     </div>
@@ -99,9 +84,9 @@
 
     </form>
 </div>
-
 </section>
 <!-- Home Section Ends -->
+
   
     </div>
 <!-- main content ends -->

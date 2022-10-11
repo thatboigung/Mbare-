@@ -14,25 +14,10 @@
     <!-- Main contaeiner start -->
 <div class="main-container">
     <!-- ==== Aside Start -===== -->
-<div class="aside">
-    <div class="logo">
-        <a href="#"><span>M</span>bare<span style="font-size: 13px;"> Online</span></a>  
-    </div>
-    <div class="nav-tongler">
-        <span></span>
-    </div>
-    <ul class="nav">
-        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="../Market/homemarket.html"  ><i class="fa fa-search-dollar"></i> Market</a></li>
-        <li><a href="../Services/servicehome.html"><i class="fa fa-seedling"></i> Services</a></li>
-        <li><a href="../Jobs/jobshome.html" class="active"><i class="fa fa-briefcase"></i> Jobs</a></li>
-        <li><a href="../Anyalyse/analysehome.html"><i class="fa fa-chart-bar"></i> Analyse</a></li>
-    </ul>
-    <div class="user">
-        <a href="../Profile/profilehome.html"><i class="fa fa-user"></i> Profile</a>
-    </div>
-    
-</div>
+    <?php 
+    $page ='jobs';
+    include_once '../shared/aside.php';
+    ?>
     <!-- ==== Aside Ends -===== -->
           <!-- main content start -->
     <div class="main-content">

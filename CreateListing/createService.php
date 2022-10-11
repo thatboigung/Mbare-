@@ -14,25 +14,7 @@
     <!-- Main contaeiner start -->
 <div class="main-container">
     <!-- ==== Aside Start -===== -->
-<div class="aside">
-    <div class="logo">
-        <a href="#"><span>M</span>bare<span style="font-size: 13px;"> Online</span></a>  
-    </div>
-    <div class="nav-tongler">
-        <span></span>
-    </div>
-    <ul class="nav">
-        <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="../Market/homemarket.html"  ><i class="fa fa-search-dollar"></i> Market</a></li>
-        <li><a href="../Services/servicehome.html"><i class="fa fa-seedling"></i> Services</a></li>
-        <li><a href="../Jobs/jobshome.html" ><i class="fa fa-briefcase"></i> Jobs</a></li>
-        <li><a href="../Anyalyse/analysehome.html"><i class="fa fa-chart-bar"></i> Analyse</a></li>
-    </ul>
-    <div class="user">
-        <a href="../Profile/profilehome.html"><i class="fa fa-user"></i> Profile</a>
-    </div>
-    
-</div>
+    <?php include_once '../shared/aside.php';?>
     <!-- ==== Aside Ends -===== -->
           <!-- main content start -->
     <div class="main-content">
@@ -40,7 +22,7 @@
 <!-- Home Section Start -->
 <section class="home section">
 
-<div class="make-form">
+ <div class="make-form">
     <form action="#">
 
 <p style="color:#888;">cover photo</p>
@@ -48,31 +30,30 @@
 <button><i class="fa fa-hamburger"></i> Add cover Photo</button>
 </div>
 <div class="details">
-    <h3>Make Your Sale Today</h3>
+    <h3>Make a Job Today</h3>
     <div >
-        <input type="text" name="title" id="title" placeholder="TITLE" style="width: 160px;"> <input type="number" name="quantity" id="quantity" class="number" placeholder="quantity">
+        <input type="text" name="title" id="title" placeholder="TITLE" style="width: 160px;"> <input type="number" name="min-price" id="quantity" class="number" placeholder="$ min-Price">
     </div>
     <div>
         <select name="catefory" id="category">
             <option value="cat">Select Category</option>
-            <option value="apperal">Fashion</option>
-            <option value="Electronics">Electronic</option>
-            <option value="Home/Garden">Home&Garden</option>
-            <option value="Gadgets">Tech</option>
-            <option value="Housing">Housing</option>
-            <option value="Cosmetics">Health&Beauty</option>
-            <option value="Food">Grocery</option>
-            <option value="Butchery">Butchery</option>
-            <option value="Gaming">Gaming Cosoles</option>
+            <option value="apperal">Rental</option>
+            <option value="Electronics">Entertainment</option>
+            
+            <option value="Transport">Transportation</option>
+            <option value="repair">Repair</option>
+            <option value="HS">House Keeping</option>
+            <option value="other">Other</option>
+     
         </select>
-        <input type="number" name="price" id="price" class="number"  placeholder="$ Price">
+        <input type="number" name="max-price" id="price" class="number"  placeholder="$ max-Price">
     </div>
     <div>
         <div style="margin-bottom: 0;">
           <a href="#">#Location</a>  
         </div>
         <div style="display: grid;margin-left:10px ;margin-bottom:0 ;">
-            <small><i class="fa fa-ship"></i> Shipping</small>
+            <small><i class="fa fa-handshake"></i> On Spot</small>
             <div style="margin-bottom: 0;">
                  <div style="margin-bottom: 0;margin-right:10px ;">
                 <label for="shipping">
@@ -102,9 +83,9 @@
 
     </form>
 </div>
+
 </section>
 <!-- Home Section Ends -->
-
   
     </div>
 <!-- main content ends -->

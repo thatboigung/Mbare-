@@ -14,7 +14,7 @@
     <!-- Main contaeiner start -->
 <div class="main-container">
     <!-- ==== Aside Start -===== -->
-<div class="aside">
+    <div class="aside">
     <div class="logo">
         <a href="#"><span>M</span>bare<span style="font-size: 13px;"> Online</span></a>  
     </div>
@@ -22,14 +22,14 @@
         <span></span>
     </div>
     <ul class="nav">
-        <li><a href="#" class="active"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="Market/homemarket.html"><i class="fa fa-search-dollar"></i> Market</a></li>
-        <li><a href="Services/servicehome.html"><i class="fa fa-seedling"></i> Services</a></li>
-        <li><a href="Jobs/jobshome.html"><i class="fa fa-briefcase"></i> Jobs</a></li>
-        <li><a href="Anyalyse/analysehome.html"><i class="fa fa-chart-bar"></i> Analyse</a></li>
+        <li><a href="index.php" class="active"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="Market/homemarket.php" class="<?php if($page=='market'){ echo 'active' ;} ?>"><i class="fa fa-search-dollar"></i> Market</a></li>
+        <li><a href="Services/servicehome.php" class="<?php if($page=='service'){ echo 'active' ;} ?>"><i class="fa fa-seedling"></i> Services</a></li>
+        <li><a href="Jobs/jobshome.php" class="<?php if($page=='jobs'){ echo 'active' ;} ?>"><i class="fa fa-briefcase"></i> Jobs</a></li>
+        <li><a href="Anyalyse/analysehome.php" class="<?php if($page=='analyse'){ echo 'active' ;} ?>"><i class="fa fa-chart-bar"></i> Analyse</a></li>
     </ul>
     <div class="user">
-        <a href="Profile/profilehome.html"><i class="fa fa-user"></i> Profile</a>
+        <a href="Profile/profilehome.php" class="<?php if($page=='home'){ echo 'active' ;} ?>"><i class="fa fa-user"></i> Profile</a>
     </div>
     
 </div>
@@ -39,52 +39,67 @@
 
 <!-- Home Section Start -->
 <section class="home section">
- <nav class="nav-section">
+<nav class="nav-section">
 
-    <div class="category"><span><i class="fa fa-list-dots">
-        <div class="category-nav">
-            
+<div class="category"><span><i class="fa fa-list-dots " id="cate">
+    <div class="category-nav" id="cates">
+        <div class="heading">
+            <h3>Categorys</h3> 
+             
         </div>
-    </i></span></i> Category 
-        <span style="margin-left:15px ;">|</span></div>
+        <p class="profile-p"> <i class="fa fa-hat-cowboy"></i> Apperel</p>  
+        <p class="profile-p"> <i class="fa fa-headphones"></i> Electronics</p>  
+        <p class="profile-p"><i class="fa fa-tools"></i>  Home / Garden</p>   
+        <p class="profile-p">  <i class="fa fa-phone"></i> Gadgets</p>  
+        <p class="profile-p">  <i class="fa fa-bowl-food"></i> Home goods</p>  
+        <p class="profile-p"> <i class="fa fa-hotel"></i> Rentals</p>  
+        <p class="profile-p"> <i class="fa fa-hand"></i> Hiring</p>  
+        <p class="profile-p"> <i class="fa fa-file-excel"></i> Services</p>  
+        <p class="profile-p"> <i class="fa fa-handshake-angle"></i> Jobs  </p> 
+    </div>
+</i></span></i> Category 
+    <span style="margin-left:15px ;">|</span></div>
 <div class="search-box">
-    <input type="text" class="search-txt" name="search" placeholder="What are you searching for..">
-<a href="Otherfile/searchResults.html" class="search-btn">
-    <i class="fa fa-search"></i>
+<input type="text" class="search-txt" name="search" placeholder="What are you searching for..">
+<a href="Otherfile/searchResults.php" class="search-btn">
+<i class="fa fa-search"></i>
 </a>
 </div>
 <div class="uer-signup">
-    <div>
-        <a href="#"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">|</span> </span> <small class="free">.Its free</small></a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">|</span></small> </a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-circle-dollar-to-slot"></i> <small class="message"> Orders</small></a>
-    </div>
+<div>
+    <a href="Otherfile/register.php"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">|</span> </span> <small class="free">.Its free</small></a>
 </div>
- </nav>
+<div>
+    <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">|</span></small> </a>
+</div>
+<div>
+    <a href="#"><i class="fa fa-circle-dollar-to-slot"></i> <small class="message"> Orders</small></a>
+</div>
+</div>
+</nav>
  <div class="main-item">
     <div class="cats">
 
         <div class="profile-p">Fashion</div>  
         <div class="profile-p">Electronics</div>  
         <div class="profile-p"> Food</div>  
-        <div class="profile-p"> Freelancer</div>  
+       
         <div class="profile-p">  Gadgets</div>  
         <div class="profile-p">  Services</div>  
         <div class="profile-p">  Rentals</div>  
         <div class="profile-p">  Hiring</div>  
-        <div class="profile-p">  Jobs  </div>  
-        
+        <div class="profile-p">  wholesale  </div>  
+         <div class="profile-p" style="background-color: #504e70;"></div>  
      </div>
     <div class="wrapper">
         <div class="box1 box">
             <h2 style="text-align: center;">Welcome On Board,Taps!</h2>
                
             <div class="item-cover-img" style="text-align: left;">
-                <img src="/images/mumu (2).jpg" alt="" style="width: 460px;height:330px">           
+                <img src="images/home/pexels-andrea-piacquadio-3784391.jpg" alt="" style="width: 460px;height:330px">  
+                  <div class="text">
+                            <p>We are all about to make your shopping experiences more easy and making your offline life get going</p>
+                        </div>         
             </div>
         
         </div>
@@ -94,13 +109,14 @@
             </div>
             <div class="top-item">
                <div class="item-cover-img">
-                        <img src="/images/mumu (2).jpg" alt="">
+                        <img src="images/mumu (2).jpg" alt="">
+                      
                     </div>  
                     <div class="info">
                         <h4>$ 56</h4>
                         <p>the best items here</p>
                         <button class="buy-btn">
-                            Buy Now
+                            Contact Supplier
                         </button>
                     </div>
             </div>
@@ -120,7 +136,7 @@
             <p class="profile-p"> <i class="fa fa-arrow-alt-circle-left"></i> Gadgets</p>  
             <p class="profile-p"> <i class="fa fa-arrow-alt-circle-left"></i> Home goods</p>  
             <p class="profile-p"> <i class="fa fa-arrow-alt-circle-left"></i> Rentals</p>  
-            <p class="profile-p"> <i class="fa fa-arrow-alt-circle-left"></i> Hiring</p>  
+            <p class="profile-p"> <i class="fa fa-arrow-alt-circle-left"></i> Wholesale</p>  
             <p class="profile-p"> <i class="fa fa-arrow-alt-circle-left"></i> Jobs  </p>  
         </div>
 
@@ -154,7 +170,7 @@
 </div>
 
       <div class="heading">
-        Consumer Electronics <span></span>
+      Wholesale <span></span>
     </div>
 <div class="wrapper-items">
     <div class=" box">One</div>
@@ -186,7 +202,7 @@
 </div>
 
 <div class="heading">
-    Services . Freelancing<span ></span>
+    Gadgets<span ></span>
 </div>
 <div class="wrapper-items">
 <div class=" box">One</div>
@@ -198,7 +214,7 @@
 
 </div>
 <div class="heading">
-    Tools . Home<span ></span>
+    Services . <span ></span>
 </div>
 <div class="wrapper-items">
 <div class="   box">One</div>
@@ -231,6 +247,6 @@
 </div>
     <!-- Main contaeiner Ends -->
     <!-- js Files -->
-    <script src="js/script.js"></script>
+    <script src="js/scriptindex.js"></script>
 </body>
 </html>
