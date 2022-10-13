@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeJobs||Mbare</title>
-    <!-- Css file -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-</head>
+<?php
+include '../shared/head.php';
+?>
 <body>
     <!-- Main contaeiner start -->
 <div class="main-container">
@@ -24,28 +17,7 @@
 
 <!-- Home Section Start -->
 <section class="home section">
- <nav class="nav-section">
-
-    <div class="category"><span><i class="fa fa-list-dots"></i></span></i> Category 
-        <span style="margin-left:15px ;">|</span></div>
-<div class="search-box">
-    <input type="text" class="search-txt" name="search" placeholder="What are you searching for..">
-<a href="../Otherfile/searchResults.html" class="search-btn">
-    <i class="fa fa-search"></i>
-</a>
-</div>
-<div class="uer-signup">
-    <div>
-        <a href="#"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">|</span> </span> <small class="free">.Its free</small></a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">|</span></small> </a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-circle-dollar-to-slot"></i> <small class="message"> Orders</small></a>
-    </div>
-</div>
- </nav>
+<?php include_once '../shared/nav.php';?>
  <div class="main-item-job">
     <div class="cats">
 

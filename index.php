@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+  function checkLogIn () {
+    if (isset($_SESSION['users']))
+          return true;
+    else return false;      
+ }
+ 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home||Mbare</title>
     <!-- Css file -->
-    <link rel="stylesheet" href="css/style.css">
+   <?php
+include 'css/style.php';
+   ?>
     <link rel="stylesheet" href="css/skins/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
@@ -28,10 +43,11 @@
         <li><a href="Jobs/jobshome.php" class="<?php if($page=='jobs'){ echo 'active' ;} ?>"><i class="fa fa-briefcase"></i> Jobs</a></li>
         <li><a href="Anyalyse/analysehome.php" class="<?php if($page=='analyse'){ echo 'active' ;} ?>"><i class="fa fa-chart-bar"></i> Analyse</a></li>
     </ul>
+   <?php if ($User=checkLogIn() === true) { ?>
     <div class="user">
         <a href="Profile/profilehome.php" class="<?php if($page=='home'){ echo 'active' ;} ?>"><i class="fa fa-user"></i> Profile</a>
     </div>
-    
+    <?php } ?>
 </div>
     <!-- ==== Aside Ends -===== -->
           <!-- main content start -->
@@ -66,15 +82,27 @@
 </a>
 </div>
 <div class="uer-signup">
-<div>
-    <a href="Otherfile/register.php"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">|</span> </span> <small class="free">.Its free</small></a>
+    <?php
+     if ($User=checkLogIn() === false) { ?>
+      <div style="margin-right: -15px;">
+    <a href="Otherfile/register.php"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">OR</span> </span> <small class="free">.Its free</small></a>
 </div>
 <div>
-    <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">|</span></small> </a>
+    <a href="Otherfile/login.inc.php"><span>Signin<span class="dev">  |</span> </span> </a>
+</div>
+   <?php } else{?>
+    <div>
+    <a href="profile/profilehome.php"><span>Hi <?= $_SESSION['users']['username'] ?><span class="dev">  |</span> </span> </a>
+</div>
+<div>
+    <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">  |</span></small> </a>
 </div>
 <div>
     <a href="#"><i class="fa fa-circle-dollar-to-slot"></i> <small class="message"> Orders</small></a>
 </div>
+<div><small><a href="Otherfile/logout.php">logout</a></small></div>
+<?php } ?>
+
 </div>
 </nav>
  <div class="main-item">

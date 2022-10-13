@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home||Mbare</title>
-    <!-- Css file -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-</head>
+<?php
+include '../shared/head.php';
+include '../phpFiles/phpfiles.php';
+?>
 <body>
     <!-- Main contaeiner start -->
 <div class="main-container">
@@ -47,13 +41,13 @@ include_once '../shared/aside.php';
                                 
                                   </p>  
                                   
-                        <button class="create-listing-btn" style="width: 200px;"> Advertise On yor accounts</button>         
+                                
             </div>
             <div class="about-prof">
 <h3>About</h3>
 <p class="welcome" style="width:450px">We are all about to make your shopping experiences more easy 
     and making your offline life get going</p>
-    <span><a href="#">Edit</a></span>
+   
  
             </div>
         
@@ -61,7 +55,7 @@ include_once '../shared/aside.php';
         </div>
         <div class="box2 box">
             <p><small>Membership username: Taps00320123_0932</small></p>
-            <p class="profile-p"> Hi, There Taps!</p>
+            <p class="profile-p"> Hi, There <?= $name; ?>!</p>
             <div style="display: flex;">
                 <img src="../images/NicePng_user-png_730154.png" alt="prof-imge" class="profile-img">
                 <div class="change-det">
@@ -69,14 +63,15 @@ include_once '../shared/aside.php';
                    <p><a href="#">Change Photo</a></p>
                    <p><a href="#">Change Email</a></p>
                    <p><a href="#">Chnage Phone</a></p>
+                    <span><a href="../CreateListing/editShop.php">Edit Business info</a></span>
                 </div>
                 
                 
             </div>
             <p class="profile-p" style="padding: 12px;">Hope Your day be Going well!</p>
-            <p>mapfumotapuwa18@gmail.com</p>
-            <p>0718553963</p>
-            <p>Sold           :12</p>
+            <p><?= $email ?></p>
+            <p><?= $phone ?></p>
+            <p>Listings:12</p>
             <button class="create-listing-btn" id="create-listing"> Create Listing</button>
             <button class="create-listing-btn" id="create-listing"> Manage Listings</button>
             <div class="create-type" id="create-type">

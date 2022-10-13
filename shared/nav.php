@@ -1,3 +1,4 @@
+
  <nav class="nav-section">
 
     <div class="category"><span><i class="fa fa-list-dots " id="cate">
@@ -25,14 +26,25 @@
 </a>
 </div>
 <div class="uer-signup">
+<?php
+     if ($User=checkLogIn() === false) { ?>
+      <div style="margin-right: -15px;">
+    <a href="../Otherfile/register.php"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">OR</span> </span> <small class="free">.Its free</small></a>
+</div>
+<div>
+    <a href="../Otherfile/login.inc.php"><span>Signin<span class="dev">  |</span> </span> </a>
+</div>
+   <?php } else{?>
     <div>
-        <a href="../Otherfile/register.php"><i class="fa fa-user-circle " ></i><span> Join <span class="dev">|</span> </span> <small class="free">.Its free</small></a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">|</span></small> </a>
-    </div>
-    <div>
-        <a href="#"><i class="fa fa-circle-dollar-to-slot"></i> <small class="message"> Orders</small></a>
-    </div>
+    <a href="../profile/profilehome.php"><span>Hi <?= $_SESSION['users']['username'] ?><span class="dev">  |</span> </span> </a>
+</div>
+<div>
+    <a href="#"><i class="fa fa-message"></i> <small class="message">Messages <span class="dev">  |</span></small> </a>
+</div>
+<div>
+    <a href="#"><i class="fa fa-circle-dollar-to-slot"></i> <small class="message"> Orders</small></a>
+</div>
+<div><small><a href="../Otherfile/logout.php">logout</a></small></div>
+<?php } ?>
 </div>
  </nav>

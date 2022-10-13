@@ -1,3 +1,4 @@
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 :root{
@@ -460,10 +461,7 @@ object-fit: cover;
     color:var(--text-black-900);
     cursor: pointer;
 }
-.box2 .profile-p:hover{
-    background-color:var(--bg-black-50);
-    text-decoration: underline;
-}
+
 .heading span{
     background-color:var(--bg-black-50);
     height: 10px;
@@ -544,17 +542,29 @@ visibility: visible;
     display: flex;
     justify-content: center;
     padding: 32px;
+    
   }
   .make-form form{
     padding: 8px;
     background-color: #fff;
     border-radius: 8px;
+    margin-bottom: -4px;
+  }
+  @media(max-width:1000px){
+    .cover-make{
+     display: none;
+    }
+    .txt{
+      display: none;
+    }
   }
   .cover-make{
     height: 200px;
     width: 300px;
     border-radius: 12px;
     background-color:var(--bg-black-50);
+    position: absolute;
+    left: 3vw;
   }
   .cover-make button{
     position: absolute;
@@ -576,6 +586,7 @@ visibility: visible;
   border-radius: 4px;
   border: 1px solid #888;
   color: #504e70;
+  width: 300px;
 }
 .number{
   width: 130px;
@@ -754,3 +765,4 @@ margin-left: 0;
 }
 
 } 
+</style>
